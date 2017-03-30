@@ -1,0 +1,141 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/typo3-share-regular/stylesheet.css);
+@import url(../../lib/font/typo3-share-mono/stylesheet.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #000;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 35px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'share-regularregular', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 1.4em;
+$heading2Size: 1.2em;
+$heading3Size: 1.0em;
+$heading4Size: 0.8em;
+
+
+.reveal .slides > section,
+.reveal .slides > section > section{
+	overflow: hidden;
+	background-color: white;
+	text-align:left;
+	padding:0;
+}
+.reveal .slides > section {
+	height:100%;
+}
+
+
+.reveal .slides > section > *,
+.reveal .slides > section > section > * {
+	margin: 20px 0 0 40px;
+}
+
+.reveal .slides > section > section {
+	margin: 0;
+}
+
+.reveal .slides > section h1 {
+	margin: 0;
+	color: #222;
+	padding:20px 20px 20px 40px;
+	background-color: #ff8700;
+	text-align: left;
+
+}
+
+.reveal .slides .right-border {
+	width: 42%;
+	float: right;
+	margin-right: 40px;
+	padding-left: 36px;
+	border-left: 1px solid #222;
+	height: 73%;
+}
+
+.reveal .slides .right {
+	width: 42%;
+	float: right;
+	margin-right: 40px;
+	padding-left: 37px;
+	height: 73%;
+}
+
+.reveal .slides .left {
+	width: 40%;
+	float: left;
+}
+
+.reveal .slides .footer {
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 0.3em;
+	font-weight: 100;
+	color: white;
+	padding: 10px 40px 10px 40px;
+	position: absolute;
+	bottom: 0;
+	right:0;
+	width: 100%;
+	background-color: #ff8700;
+	z-index: 500;
+	text-align: right;
+}
+
+.reveal .slides .footer .left {
+	text-align: left;
+	margin-left: 66px;
+	padding-top: 8px;
+}
+.reveal .slides .footer .middle {
+	text-align: center;
+}
+.reveal .slides .footer .right {
+	text-align: right;
+	margin-right: 0;
+	width: 25%;
+}
+
+
+.reveal .slides .footer .copyright {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.reveal section .footer img {
+	border: none;
+	background: none;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
